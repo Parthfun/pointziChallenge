@@ -1,0 +1,25 @@
+1608545784193	geckodriver	INFO	Listening on 127.0.0.1:50004
+1608545784709	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yl/vzkp6k7d3fb2vcqh311_0c6c0000gn/T/rust_mozprofilebs8ymR"
+2020-12-21 21:16:29.400 firefox-bin[5441:414883] Warning: Expected min height of view: (<NSButton: 0x123a83000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:16:29.401 firefox-bin[5441:414883] Warning: Expected min height of view: (<NSButton: 0x12f3c6800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:16:29.401 firefox-bin[5441:414883] Warning: Expected min height of view: (<NSButton: 0x12f3cb000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:16:29.402 firefox-bin[5441:414883] Warning: Expected min height of view: (<NSButton: 0x12f3c9800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:16:29.409 firefox-bin[5441:414883] Warning: Expected min height of view: (<NSButton: 0x12f3cd000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:16:29.415 firefox-bin[5441:414883] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12f3c8400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:16:29.416 firefox-bin[5441:414883] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12f4b8800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1608545791001	Marionette	INFO	Listening on port 50020
+1608545791102	Marionette	WARN	TLS certificate errors will be ignored for this session
+1608545827337	geckodriver	INFO	Listening on 127.0.0.1:50342
+1608545827370	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yl/vzkp6k7d3fb2vcqh311_0c6c0000gn/T/rust_mozprofile19Awqp"
+2020-12-21 21:17:09.367 firefox-bin[5458:416609] Warning: Expected min height of view: (<NSButton: 0x11feba400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:17:09.367 firefox-bin[5458:416609] Warning: Expected min height of view: (<NSButton: 0x12a5e3800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:17:09.368 firefox-bin[5458:416609] Warning: Expected min height of view: (<NSButton: 0x12a5e1c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:17:09.369 firefox-bin[5458:416609] Warning: Expected min height of view: (<NSButton: 0x12a5e1800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:17:09.370 firefox-bin[5458:416609] Warning: Expected min height of view: (<NSButton: 0x12a5e3400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:17:09.370 firefox-bin[5458:416609] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12a5e3c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2020-12-21 21:17:09.371 firefox-bin[5458:416609] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12ac48c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1608545831204	Marionette	INFO	Listening on port 50355
+1608545831226	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: chrome://marionette/content/proxy.js, line 287: NS_ERROR_NOT_INITIALIZED
