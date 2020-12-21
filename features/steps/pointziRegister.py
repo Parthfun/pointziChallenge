@@ -14,8 +14,8 @@ def step_impl(context):
 
 @then('click on register')
 def step_impl(context):
-    context.driver.implicitly_wait(20)
-    register = WebDriverWait(context.driver,50).until(EC.element_to_be_clickable((By.XPATH, "//button["
+    context.driver.implicitly_wait(1000)
+    register = WebDriverWait(context.driver, 100).until(EC.element_to_be_clickable((By.XPATH, "//button["
                                                                                             "normalize-space("
                                                                                             ")='Register']")))
     register.click()
@@ -59,7 +59,8 @@ def step_impl(context, lastname, firstname, cname):
 @then('click sign up')
 def step_impl(context):
     context.driver.implicitly_wait(10000)
-    element = WebDriverWait(context.driver, 50).until(EC.element_to_be_clickable((By.XPATH, "//button["
+    context.driver.find_element_by_class_name("ng-scope material-icons").click()
+    element = WebDriverWait(context.driver, 100).until(EC.element_to_be_clickable((By.XPATH, "//button["
                                                                                             "normalize-space()='Sign "
                                                                                             "up']")))
     element.click()
