@@ -10,16 +10,18 @@ from selenium.webdriver.common.action_chains import ActionChains
 @then('open pointzi dashboard page')
 def step_impl(context):
     context.driver.get("https://dashboard.pointzi.com/")
+    visible = WebDriverWait(context.driver, 100).until(EC.visibility_of_element_located((By.XPATH, "//a[normalize"
+                                                                                                   "-space("
+                                                                                                   ")='']//img["
+                                                                                                   "@class='logo-img']")))
 
 
 @then('click on register')
 def step_impl(context):
-    context.driver.implicitly_wait(1000)
     register = WebDriverWait(context.driver, 100).until(EC.element_to_be_clickable((By.XPATH, "//button["
-                                                                                            "normalize-space("
-                                                                                            ")='Register']")))
+                                                                                              "normalize-space("
+                                                                                              ")='Register']")))
     register.click()
-    #context.driver.find_element_by_xpath("//button[normalize-space()='Register']").click()
 
 
 @then('Enter email "{email}" password "{passs}" and confirm password "{confirmpass}"')
@@ -32,7 +34,11 @@ def step_impl(context, email, passs, confirmpass):
 @then('click next')
 def step_impl(context):
     context.driver.implicitly_wait(20)
-    context.driver.find_element_by_xpath("//button[normalize-space()='Next']").click()
+    correctdetails = WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button["
+                                                                                                   "normalize-space("
+                                                                                                   ")='Next']")))
+    correctdetails.click()
+    #context.driver.find_element_by_xpath("//button[normalize-space()='Next']").click()
 
 
 @then('select role and No. of app users')
@@ -58,17 +64,13 @@ def step_impl(context, lastname, firstname, cname):
 
 @then('click sign up')
 def step_impl(context):
-    context.driver.implicitly_wait(10000)
-    context.driver.find_element_by_class_name("ng-scope material-icons").click()
     element = WebDriverWait(context.driver, 100).until(EC.element_to_be_clickable((By.XPATH, "//button["
-                                                                                            "normalize-space()='Sign "
-                                                                                            "up']")))
+                                                                                             "normalize-space()='Sign "
+                                                                                             "up']")))
     element.click()
     status = context.driver.find_element_by_xpath("//div[@class='logo-wrapper']").is_displayed()
     if status:
-        assert status is False, "Test Failed"
-    else:
-        assert status is True, "Test Passed"
+        assert status is False, "User Already exist"
 
 
 @then('user is successfully signed up')

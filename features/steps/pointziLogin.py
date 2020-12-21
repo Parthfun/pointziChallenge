@@ -6,6 +6,7 @@ from selenium import webdriver
 def launch_browser(context):
     #context.driver = webdriver.Chrome()
     context.driver = webdriver.Firefox()
+    context.driver.fullscreen_window()
 
 
 @when('open pointzi dashboard page')
@@ -26,10 +27,12 @@ def step_impl(context, user, pwd):
 def step_impl(context):
     context.driver.implicitly_wait(20)
     context.driver.find_element_by_xpath("//button[normalize-space()='Login']").click()
-    #status = context.driver.find_element_by_xpath("//div[@class='md-toast-content']").is_displayed()
-    status = context.driver.find_element_by_xpath("//img[@pz-cdn='$ctrl.options.logo']").is_displayed()
+    status = context.driver.find_element_by_xpath("//div[@class='md-toast-content']").is_displayed()
+    #status = context.driver.find_element_by_xpath("//img[@pz-cdn='$ctrl.options.logo']").is_displayed()
     if status:
-        assert status is True, "Test Passed"
+        assert status is False, "Test Failed"
+        context.driver.close()
     else:
         assert status is False, "Test Failed"
+        context.driver.close()
 
